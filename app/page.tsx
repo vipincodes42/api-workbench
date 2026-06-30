@@ -11,6 +11,13 @@ type ApiResponse = {
 };
 
 export default function Home() {
+  function formatJson(text: string) {
+  try {
+    return JSON.stringify(JSON.parse(text), null, 2);
+  } catch {
+    return text;
+  }
+}
   const [method, setMethod] = useState("GET");
   const [url, setUrl] = useState("https://api.github.com/users/octocat");
   const [response, setResponse] = useState<ApiResponse | null>(null);
@@ -93,7 +100,7 @@ export default function Home() {
                   </div>
 
                   <pre className="bg-black text-green-400 p-4 rounded-lg overflow-auto text-sm">
-                    {response.body}
+                    {formatJson(response.body)}
                   </pre>
                 </>
               )}
