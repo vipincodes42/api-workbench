@@ -6,6 +6,7 @@ type ApiResponse = {
   status: number;
   statusText: string;
   responseTime: number;
+  headers: Record<string, string>;
   body: string;
   error?: string;
 };
@@ -22,6 +23,7 @@ export default function Home() {
   const [url, setUrl] = useState("https://api.github.com/users/octocat");
   const [response, setResponse] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState("pretty");
 
   async function sendRequest() {
     setLoading(true);
@@ -83,6 +85,40 @@ export default function Home() {
 
           <div>
             <h2 className="font-semibold mb-2">Response</h2>
+            <div className="flex gap-2 mb-4">
+  <button
+    onClick={() => setActiveTab("pretty")}
+    className={`px-4 py-2 rounded ${
+      activeTab === "pretty"
+        ? "bg-blue-600 text-white"
+        : "bg-gray-200"
+    }`}
+  >
+    Pretty
+  </button>
+
+  <button
+    onClick={() => setActiveTab("raw")}
+    className={`px-4 py-2 rounded ${
+      activeTab === "raw"
+        ? "bg-blue-600 text-white"
+        : "bg-gray-200"
+    }`}
+  >
+    Raw
+  </button>
+
+ <button
+  onClick={() => setActiveTab("headers")}
+  className={`px-4 py-2 rounded ${
+    activeTab === "headers"
+      ? "bg-blue-600 text-white"
+      : "bg-gray-200"
+  }`}
+>
+  Headers
+</button>
+</div>
 
             <div className="border rounded-lg p-4 min-h-64 bg-gray-50">
               {!response && (
@@ -100,8 +136,12 @@ export default function Home() {
                   </div>
 
                   <pre className="bg-black text-green-400 p-4 rounded-lg overflow-auto text-sm">
-                    {formatJson(response.body)}
-                  </pre>
+  {activeTab === "pretty"
+  ? formatJson(response.body)
+  : activeTab === "raw"
+  ? response.body
+  : JSON.stringify(response.headers, null, 2)}
+</pre>
                 </>
               )}
             </div>
