@@ -1,36 +1,110 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# API Testing Platform
+
+A modern API testing platform built with **Next.js**, **React**, **TypeScript**, and **Tailwind CSS** that enables developers to create, send, and inspect HTTP requests through an intuitive web interface. The project focuses on providing a fast, lightweight, and user-friendly experience for testing REST APIs during development.
+
+---
+
+## Features
+
+- Send HTTP requests using multiple methods (GET, POST, PUT, PATCH, DELETE)
+- Configure custom request headers
+- Add and manage query parameters
+- Send JSON request bodies
+- View formatted and raw API responses
+- Display response status and response time
+- Responsive interface built with reusable React components
+- Clean and organized developer experience
+
+---
+
+## Tech Stack
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Development Tools
+- Git
+- GitHub
+- VS Code
+
+### APIs
+- REST APIs
+- Fetch API
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/
+├── components/
+├── hooks/
+├── services/
+├── types/
+└── utils/
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository:
+
+```bash
+git clone https://github.com/vipincodes42/api-testing-platform.git
+```
+
+Navigate into the project:
+
+```bash
+cd api-testing-platform
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Motivation
 
-To learn more about Next.js, take a look at the following resources:
+This project was created to strengthen my understanding of modern web development while building a practical tool that developers can use to test and inspect REST APIs. It provided hands-on experience with component-based architecture, API communication, TypeScript, state management, and responsive interface design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Skills Demonstrated
 
-## Deploy on Vercel
+- Frontend application development with React and Next.js
+- Type-safe development using TypeScript
+- REST API integration and HTTP request handling
+- Component-based UI architecture
+- Responsive web design with Tailwind CSS
+- Git version control and collaborative development workflows
+- Clean, maintainable, and reusable code practices
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+
+**Vipin Shadrach Deepak**
+
+- GitHub: https://github.com/vipincodes42
+- LinkedIn: https://www.linkedin.com/in/vipindeepak/
